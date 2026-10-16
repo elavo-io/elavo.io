@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Source · Elavo</title>
+  <meta name="description" content="Where Elavo's source code lives.">
+  <link rel="icon" href="/assets/sun.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a href="/" aria-label="Elavo home"><span class="logo"></span></a>
+    <nav class="site-nav" aria-label="Site">
+      <a href="/download/">Download</a>
+      <a href="/verify/">Verify</a>
+      <a href="/hardware/">Hardware</a>
+      <a href="/install/">Install</a>
+      <a href="/source/" aria-current="page">Source</a>
+      <a href="/about/">About</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <h1>Source</h1>
+    <p class="lede">Elavo is built in the open, on GitHub.</p>
+
+    <ul class="repos">
+      <li>
+        <a href="https://github.com/elavo-io/elavo">
+          <strong>elavo</strong>
+          <span>The system image: what is installed, how it is built, and the signing key.</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/elavo-io/elavo-folio">
+          <strong>elavo-folio</strong>
+          <span>The desktop shell: the menu bar, the dock, and search.</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/elavo-io/elavo-visuals">
+          <strong>elavo-visuals</strong>
+          <span>The logo, boot animation, theme, and icons.</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/elavo-io/elavo.io">
+          <strong>elavo.io</strong>
+          <span>This website.</span>
+        </a>
+      </li>
+    </ul>
+
+    <h2>Built on</h2>
+    <ul>
+      <li><a href="https://fedoraproject.org/">Fedora</a>, for the packages and the signed kernel</li>
+      <li><a href="https://universal-blue.org/">Universal Blue</a>, for the base image and the build tooling</li>
+      <li><a href="https://containers.github.io/bootc/">bootc</a>, for image-based installs and updates</li>
+      <li><a href="https://labwc.github.io/">labwc</a>, the Wayland compositor</li>
+      <li><a href="https://flathub.org/">Flathub</a>, for applications</li>
+    </ul>
+  </main>
+
+  <footer class="site-footer">
+    <span>Elavo</span>
+    <a href="https://github.com/elavo-io">GitHub</a>
+  </footer>
+</body>
+</html>

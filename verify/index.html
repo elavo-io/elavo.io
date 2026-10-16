@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Verify · Elavo</title>
+  <meta name="description" content="Check the Elavo ISO checksum and the cosign signature on the system image.">
+  <link rel="icon" href="/assets/sun.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a href="/" aria-label="Elavo home"><span class="logo"></span></a>
+    <nav class="site-nav" aria-label="Site">
+      <a href="/download/">Download</a>
+      <a href="/verify/" aria-current="page">Verify</a>
+      <a href="/hardware/">Hardware</a>
+      <a href="/install/">Install</a>
+      <a href="/source/">Source</a>
+      <a href="/about/">About</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <h1>Verify</h1>
+    <p class="lede">Two checks answer two questions. The checksum shows that the ISO you downloaded is the file we published. The signature shows that the system image came from Elavo's build.</p>
+
+    <h2>Check the ISO</h2>
+    <p>Compute the SHA-256 checksum of the file, and compare it with the one on the <a href="/download/">download page</a>. They must match exactly.</p>
+
+    <h3>Linux</h3>
+    <div class="command"><pre><code>sha256sum path/to/elavo.iso</code></pre></div>
+
+    <h3>macOS</h3>
+    <div class="command"><pre><code>shasum -a 256 path/to/elavo.iso</code></pre></div>
+
+    <h3>Windows (PowerShell)</h3>
+    <div class="command"><pre><code>Get-FileHash path\to\elavo.iso -Algorithm SHA256</code></pre></div>
+
+    <p>If the checksums differ, delete the file and download it again. Do not install from it.</p>
+
+    <h2>Check the system image</h2>
+    <p>Every Elavo image is signed with <a href="https://github.com/sigstore/cosign">cosign</a> when it is built. Installed machines update from that image, <code>ghcr.io/elavo-io/elavo</code>. Download the public key, then run:</p>
+    <div class="command"><pre><code>cosign verify --key cosign.pub ghcr.io/elavo-io/elavo</code></pre></div>
+    <p>With no tag, cosign checks <code>latest</code>. To check another tag, add it after a colon, for example <code>ghcr.io/elavo-io/elavo:stable</code> once the stable channel exists.</p>
+    <p>A good result lists the checks cosign performed and prints the signature as JSON. A failure prints an error and no signature.</p>
+
+    <h3>The public key</h3>
+    <p>Download it from this site, <a href="/cosign.pub" download>cosign.pub</a>, and compare it with the copy in the <a href="https://github.com/elavo-io/elavo/blob/main/cosign.pub">image repository</a>. If they differ, trust neither, and do not install.</p>
+    <div class="command"><pre><code>-----BEGIN PUBLIC KEY-----
+MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEu/1HskOO1+g4XeC7QLUC1n7mtm7I
+F2V9vzI48DxAIjN3iDmsFPd8P//DpRqF9mRg1fnHmdTYeboZyqYGwSXKww==
+-----END PUBLIC KEY-----</code></pre></div>
+
+    <h3>Getting cosign</h3>
+    <p>On macOS, install it with Homebrew:</p>
+    <div class="command"><pre><code>brew install cosign</code></pre></div>
+    <p>For Linux and Windows, download a build from the <a href="https://github.com/sigstore/cosign/releases">cosign releases page</a>.</p>
+  </main>
+
+  <footer class="site-footer">
+    <span>Elavo</span>
+    <a href="https://github.com/elavo-io">GitHub</a>
+  </footer>
+  <script src="/assets/copy.js"></script>
+</body>
+</html>

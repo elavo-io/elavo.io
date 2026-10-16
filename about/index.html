@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About · Elavo</title>
+  <meta name="description" content="What Elavo is, and what comes next.">
+  <link rel="icon" href="/assets/sun.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a href="/" aria-label="Elavo home"><span class="logo"></span></a>
+    <nav class="site-nav" aria-label="Site">
+      <a href="/download/">Download</a>
+      <a href="/verify/">Verify</a>
+      <a href="/hardware/">Hardware</a>
+      <a href="/install/">Install</a>
+      <a href="/source/">Source</a>
+      <a href="/about/" aria-current="page">About</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <h1>About</h1>
+    <p class="lede">Elavo is a Linux desktop for PCs. You install it from an ISO, and it updates as one signed system image.</p>
+
+    <h2>What is in it today</h2>
+    <ul>
+      <li>A menu bar across the top of the screen</li>
+      <li>A dock for the apps you keep and the ones that are open</li>
+      <li>Search, with <kbd>Super</kbd> + <kbd>Space</kbd>, for apps, arithmetic, and unit conversion</li>
+      <li>Elavo's own boot animation and theme</li>
+      <li>Applications from Flathub, with Firefox installed on first start</li>
+    </ul>
+
+    <h2>What comes next</h2>
+    <ul>
+      <li>Settings and a control center</li>
+      <li>An Applications folder, where adding and removing software happens in one place</li>
+      <li>Elavo's own icons</li>
+      <li>An image for PCs with NVIDIA graphics</li>
+    </ul>
+
+    <h2>How it is made</h2>
+    <p>The system is built from Fedora through Universal Blue, as a container image. Each build is signed, and an installed PC moves to the next build in one step, keeping the previous one to fall back to. The desktop runs on the labwc Wayland compositor. The shell, artwork, and theme are Elavo's own. See <a href="/source/">Source</a>.</p>
+  </main>
+
+  <footer class="site-footer">
+    <span>Elavo</span>
+    <a href="https://github.com/elavo-io">GitHub</a>
+  </footer>
+</body>
+</html>

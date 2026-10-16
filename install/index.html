@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Install · Elavo</title>
+  <meta name="description" content="How to install Elavo from the ISO, and how updates work.">
+  <link rel="icon" href="/assets/sun.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a href="/" aria-label="Elavo home"><span class="logo"></span></a>
+    <nav class="site-nav" aria-label="Site">
+      <a href="/download/">Download</a>
+      <a href="/verify/">Verify</a>
+      <a href="/hardware/">Hardware</a>
+      <a href="/install/" aria-current="page">Install</a>
+      <a href="/source/">Source</a>
+      <a href="/about/">About</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <h1>Install</h1>
+    <p class="lede">Installing erases the disk you choose. Back up anything on it first.</p>
+
+    <h2>1. Download and verify</h2>
+    <p>Get the ISO from the <a href="/download/">download page</a>, and <a href="/verify/">check its checksum</a>.</p>
+
+    <h2>2. Write it to a USB stick</h2>
+    <p>Use a USB stick larger than the ISO. Writing replaces everything on it. <a href="https://github.com/FedoraQt/MediaWriter">Fedora Media Writer</a> and <a href="https://etcher.balena.io/">balenaEtcher</a> both work on Linux, macOS, and Windows. Pick the ISO, pick the stick, and write.</p>
+
+    <h2>3. Start the PC from the stick</h2>
+    <p>Plug the stick in, turn the PC on, and open its boot menu. The key differs by maker. F12, F11, F10, and Esc are common. Choose the USB stick.</p>
+
+    <h2>4. Run the installer</h2>
+    <p>The installer is Fedora's, and its screens still show Fedora's name. That changes in a later ISO. It asks for:</p>
+    <ul>
+      <li>the disk to install to</li>
+      <li>your network</li>
+      <li>your time zone</li>
+      <li>your user account and password</li>
+    </ul>
+    <p>When it finishes, restart and remove the USB stick.</p>
+
+    <h2>5. First start</h2>
+    <p>Elavo shows its boot animation, then the sign-in screen. After you sign in, the desktop has a menu bar across the top and a dock at the bottom. Press <kbd>Super</kbd> + <kbd>Space</kbd> to search.</p>
+    <p>The first time the PC is online, Elavo installs Firefox from Flathub in the background. It appears a few minutes later.</p>
+
+    <h2>Updates</h2>
+    <p>Elavo updates the whole system as one signed image. An update applies the next time you restart, and the previous build stays on the disk to fall back to.</p>
+    <p>To see which build is running and whether one is waiting:</p>
+    <div class="command"><pre><code>sudo bootc status</code></pre></div>
+    <p>To fetch an update now:</p>
+    <div class="command"><pre><code>sudo bootc upgrade</code></pre></div>
+    <p>A machine installed from today's ISO follows the <code>latest</code> build. A <code>stable</code> channel arrives with the first public release.</p>
+
+    <h2 id="secure-boot">Secure Boot</h2>
+    <p><strong>Not tested yet.</strong> The laptop we installed on has no Secure Boot setting. Elavo uses Fedora's signed kernel, so we expect it to start with Secure Boot on. This section will say what we observed once a machine that has the setting has been tested.</p>
+  </main>
+
+  <footer class="site-footer">
+    <span>Elavo</span>
+    <a href="https://github.com/elavo-io">GitHub</a>
+  </footer>
+  <script src="/assets/copy.js"></script>
+</body>
+</html>
