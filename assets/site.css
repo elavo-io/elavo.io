@@ -166,6 +166,11 @@ main {
   text-decoration: none;
 }
 
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
 .site-footer a:hover {
   color: var(--text);
 }
