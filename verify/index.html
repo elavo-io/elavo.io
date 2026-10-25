@@ -11,15 +11,19 @@
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
-    <a href="/" aria-label="Elavo home"><span class="logo"></span></a>
-    <nav class="site-nav" aria-label="Site">
-      <a href="/download/">Download</a>
-      <a href="/verify/" aria-current="page">Verify</a>
-      <a href="/hardware/">Hardware</a>
-      <a href="/install/">Install</a>
-      <a href="/source/">Source</a>
-      <a href="/about/">About</a>
-    </nav>
+    <div class="wrap bar">
+      <a class="brand" href="/" aria-label="Elavo home">
+        <img class="brand-mark" src="/assets/sun.svg" alt="">
+        <span class="brand-name">Elavo</span>
+      </a>
+      <nav class="site-nav" aria-label="Site">
+        <a href="/download/">Download</a>
+        <a href="/hardware/">Hardware</a>
+        <a href="/install/">Install</a>
+        <a href="/source/">Source</a>
+        <a href="/about/">About</a>
+      </nav>
+    </div>
   </header>
 
   <main id="main">
@@ -60,11 +64,24 @@ F2V9vzI48DxAIjN3iDmsFPd8P//DpRqF9mRg1fnHmdTYeboZyqYGwSXKww==
   </main>
 
   <footer class="site-footer">
-    <span>Elavo</span>
-    <span class="footer-links">
-      <a href="https://t.me/elavoNews">Telegram</a>
-      <a href="https://github.com/elavo-io">GitHub</a>
-    </span>
+    <div class="wrap footer-inner">
+      <a class="brand" href="/">
+        <img class="brand-mark" src="/assets/sun.svg" alt="">
+        <span class="brand-name">Elavo</span>
+      </a>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="/download/">Download</a>
+        <a href="/verify/">Verify</a>
+        <a href="/install/">Install</a>
+        <a href="/hardware/">Hardware</a>
+        <a href="/source/">Source</a>
+        <a href="/about/">About</a>
+      </nav>
+      <nav class="footer-else" aria-label="Elsewhere">
+        <a href="https://t.me/elavoNews">Telegram</a>
+        <a href="https://github.com/elavo-io">GitHub</a>
+      </nav>
+    </div>
   </footer>
   <script src="/assets/copy.js"></script>
 </body>

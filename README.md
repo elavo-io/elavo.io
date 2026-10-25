@@ -14,9 +14,10 @@ Then open <http://127.0.0.1:4180/>.
 
 | Path | What it is |
 | --- | --- |
-| `logo.svg` | The sun and the wordmark. Pages draw it as a CSS mask, so it takes the text color in light and dark mode. |
-| `assets/sun.svg` | The favicon, the sun from `logo.svg`. |
-| `assets/site.css` | All styles. Colors follow the About Elavo panel: white and `#141414` in light, `#292929` and `#EBEBEB` in dark. |
+| `logo.svg` | The sun and the wordmark, including the fade. The home page shows this file on a dark stage. |
+| `assets/sun.svg` | The favicon and the header mark. It follows the system light or dark setting. |
+| `assets/site.css` | All styles. Page colors follow the About Elavo panel: white and `#141414` in light, `#292929` and `#EBEBEB` in dark. Links use the desktop accent, `#0860f2`. |
+| `assets/shots/` | Desktop and Wallpaper screenshots from the test PC, used on the home page. |
 | `assets/copy.js` | Adds a Copy button to command blocks. |
 | `cosign.pub` | A copy of the image signing key from [elavo-io/elavo](https://github.com/elavo-io/elavo/blob/main/cosign.pub). Keep the two identical. |
 | `CNAME` | The custom domain for GitHub Pages. |

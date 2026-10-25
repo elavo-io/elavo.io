@@ -11,28 +11,100 @@
 <body class="home">
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
-    <nav class="site-nav" aria-label="Site">
-      <a href="/download/">Download</a>
-      <a href="/verify/">Verify</a>
-      <a href="/hardware/">Hardware</a>
-      <a href="/install/">Install</a>
-      <a href="/source/">Source</a>
-      <a href="/about/">About</a>
-    </nav>
+    <div class="wrap bar">
+      <a class="brand" href="/" aria-label="Elavo home">
+        <img class="brand-mark" src="/assets/sun.svg" alt="">
+        <span class="brand-name">Elavo</span>
+      </a>
+      <nav class="site-nav" aria-label="Site">
+        <a href="/download/">Download</a>
+        <a href="/hardware/">Hardware</a>
+        <a href="/install/">Install</a>
+        <a href="/source/">Source</a>
+        <a href="/about/">About</a>
+      </nav>
+    </div>
   </header>
 
   <main id="main">
-    <h1><span class="logo" role="img" aria-label="Elavo"></span></h1>
-    <p class="tagline">A Linux desktop for PCs, with a menu bar, a dock, and signed system updates.</p>
-    <a class="button" href="/download/">Download</a>
+    <section class="hero">
+      <h1 class="hero-logo"><img src="/logo.svg" alt="Elavo"></h1>
+      <p class="hero-tagline">A Linux desktop for PCs, with a menu bar, a dock, and signed system updates.</p>
+      <a class="button button-on-dark" href="/download/">Download</a>
+    </section>
+
+    <figure class="shot">
+      <img src="/assets/shots/desktop.jpg" alt="The Elavo desktop, with a menu bar, a dock, and a landscape wallpaper.">
+    </figure>
+
+    <section class="chapter">
+      <h2>A menu bar, a dock, and search.</h2>
+    </section>
+
+    <section class="points">
+      <article>
+        <h3>Menu bar</h3>
+        <p>The focused application's menus, the clock, and the icons along the top.</p>
+      </article>
+      <article>
+        <h3>Dock</h3>
+        <p>The apps you keep, the ones that are open, and the Trash.</p>
+      </article>
+      <article>
+        <h3>Search</h3>
+        <p><kbd>Super</kbd> + <kbd>Space</kbd>, for apps, arithmetic, and unit conversion.</p>
+      </article>
+    </section>
+
+    <p class="aside">Hold <kbd>Alt</kbd> and tap <kbd>Tab</kbd> to move between open applications. Files in the Desktop folder, and drives you plug in, sit on the wallpaper.</p>
+
+    <figure class="shot">
+      <img src="/assets/shots/wallpaper.jpg" alt="System Settings open to Wallpaper, with dynamic pictures and landscapes.">
+    </figure>
+
+    <section class="chapter">
+      <h2>Settings for the desktop you see.</h2>
+      <p>Wallpaper can be a dynamic picture, a landscape, or a picture of your own. The same window is where the dock, search, displays, and the account are set. A control center, opened from the icons at the right of the menu bar, comes later.</p>
+    </section>
+
+    <section class="chapter chapter-next">
+      <h2>One folder for every application you add.</h2>
+      <p>Applications is a single folder. Drop a Flatpak or an AppImage on it and Elavo adds it there, with the others. A Flatpak reference, a Flatpak bundle, and an AppImage are the same gesture.</p>
+      <p>Drag an entry to the dock to pin it, or onto the desktop to leave a shortcut. The application stays in the folder. Move the entry to the Trash and Elavo removes it. Applications that come with the system stay put.</p>
+      <p>Firefox is installed from Flathub the first time the PC is online, and that one can be removed. The folder itself is next. It is not in the image yet.</p>
+    </section>
+
+    <section class="chapter chapter-next">
+      <h2>The system is one signed image.</h2>
+      <p>You install Elavo from an ISO. An update replaces the whole system the next time you restart, and the previous build stays on the disk so you can fall back.</p>
+    </section>
+
+    <section class="close">
+      <h2>Intel and AMD graphics.</h2>
+      <p>One installer for 64-bit desktops and laptops. NVIDIA comes later, in its own image. The first public ISO is not published yet.</p>
+      <a class="button" href="/download/">Download</a>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <span>Elavo</span>
-    <span class="footer-links">
-      <a href="https://t.me/elavoNews">Telegram</a>
-      <a href="https://github.com/elavo-io">GitHub</a>
-    </span>
+    <div class="wrap footer-inner">
+      <a class="brand" href="/">
+        <img class="brand-mark" src="/assets/sun.svg" alt="">
+        <span class="brand-name">Elavo</span>
+      </a>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="/download/">Download</a>
+        <a href="/verify/">Verify</a>
+        <a href="/install/">Install</a>
+        <a href="/hardware/">Hardware</a>
+        <a href="/source/">Source</a>
+        <a href="/about/">About</a>
+      </nav>
+      <nav class="footer-else" aria-label="Elsewhere">
+        <a href="https://t.me/elavoNews">Telegram</a>
+        <a href="https://github.com/elavo-io">GitHub</a>
+      </nav>
+    </div>
   </footer>
 </body>
 </html>
