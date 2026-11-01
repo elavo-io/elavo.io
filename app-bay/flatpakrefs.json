@@ -6,7 +6,9 @@
       "name": "Sample Ref",
       "summary": "A stand-in flatpakref. Replace the download with a real ref URL.",
       "developer": "Example",
-      "categories": ["utility"],
+      "categories": [
+        "utility"
+      ],
       "icon": "",
       "download": "https://elavo.io/app-bay/refs/com.example.Sample.flatpakref",
       "version": "1.0.0",
